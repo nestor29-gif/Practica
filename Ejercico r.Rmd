@@ -1,0 +1,55 @@
+---
+title: "Ejercicio practica en R"
+author: "Nestor"
+date: "2025-05-10"
+output: html_document
+---
+## Disparo olimpico con pistola de aire
+
++ **Problema** Un tirardor olimpico quiere saber la probabilidad de que su tiro acierte dentro del circulo de 10 punto
+
+
+```{r}
+s <- 10
+r <- 2.19
+
+# Visualización
+plot(c(0, s), c(0, s), type = "n", xlab = "x", ylab = "y",
+     main = "Probabilidad Geométrica: Punto en un Área")
+rect(0, 0, s, s) # Cuadrado
+symbols(s / 2, s / 2, circles = r, inches = FALSE, add = TRUE, fg = "red") # Círculo
+text(s / 2, s * 0.9, paste("Área Cuadrado =", s^2), cex = 0.8)
+text(s / 2, s * 0.1, paste("Área Círculo =", round(pi * r^2, 2)), col = "red", cex = 0.8)
+```
+
+
+```{r}
+areac <- 100
+areaci <- 15.07
+
+PROBABILIDAA <- areac/areaci
+
+cat('Probabilidad geometrica',PROBABILIDAA )
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
